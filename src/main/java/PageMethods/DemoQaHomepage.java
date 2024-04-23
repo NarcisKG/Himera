@@ -7,9 +7,11 @@ import org.openqa.selenium.By;
 
 public class DemoQaHomepage extends BasePage {
 
-    public void clickOnElements(){
-        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.DEMO_QA_ELEMENTS)));}
+    public DemoQaElements clickOnElements(){
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.DEMO_QA_ELEMENTS)));
+        return new DemoQaElements();}
 
-    public void clickOnForms(){
-        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_FORMS)));}
+    public DemoQaHomepage clickOnForms(){
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_FORMS)));
+        return this;}
 }
