@@ -3,7 +3,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class ClickOnElementsTextBoxTest extends DemoQaHomepage {
+public class ClickOnFormsTest extends DemoQaHomepage {
 
     @BeforeEach
     public void setup(){
@@ -13,8 +13,7 @@ public class ClickOnElementsTextBoxTest extends DemoQaHomepage {
     @Test
     public void test(){
         DemoQaHomepage demo=new DemoQaHomepage();
-        demo.clickOnElements().clickOnTextBox();
-        }
+        demo.clickOnForms();}
 
     @AfterEach
     public void close(){
