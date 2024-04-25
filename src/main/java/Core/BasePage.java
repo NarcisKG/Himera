@@ -7,28 +7,40 @@ import java.time.Duration;
 
 public class BasePage extends Properties {
 
-    protected void clickOnElement(By locator){
+    protected void clickOnElement(By locator) {
         waitForElementToBeVisible(locator);//
         getDriver().findElement(locator).click();
     }
-    protected void waitForElementToBeVisible(By locator){
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+
+    protected void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    protected void typeText(String text, By locator){
+    protected void typeText(String text, By locator) {
         waitForElementToBeVisible(locator);//
         getDriver().findElement(locator).sendKeys(text);
     }
 
-    protected String getElementText(By locator){
+    protected String getElementText(By locator) {
         waitForElementToBeVisible(locator);
         return getDriver().findElement(locator).getText();
 
     }
 
-    protected String getLocator(String locator, String arg){
-        return  locator.replace("%ARG%", arg);
+    protected String getLocator(String locator, String arg) {
+        return locator.replace("%ARG%", arg);
     }
 
+    protected boolean isElementVisible(By locator) {
+        boolean isVisible = true;
+        try {
+            waitForElementToBeVisible(locator);
+        } catch (Exception e) {
+            isVisible = false;
+
+        }
+        return isVisible;
+
+    }
 }

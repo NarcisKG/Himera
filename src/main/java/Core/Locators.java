@@ -8,4 +8,6 @@ public class Locators {
 
     public static String SPAN_ELEMENT_BY_TEXT = "//span[text()='%ARG%']";
 
+    public static String ELEMENT_LIST_SHOW = "//div[@class='element-list collapse show']";
+
 }

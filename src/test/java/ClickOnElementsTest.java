@@ -13,7 +13,7 @@ public class ClickOnElementsTest extends DemoQaHomepage {
     @Test
     public void test(){
         DemoQaHomepage demo=new DemoQaHomepage();
-        demo.clickOnElements();}
+        demo.clickOnElements().verifyElementsListIsVisible();}
 
     @AfterEach
     public void close(){
