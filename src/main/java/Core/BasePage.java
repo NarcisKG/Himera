@@ -43,4 +43,11 @@ public class BasePage extends Properties {
         return isVisible;
 
     }
+
+    protected int getElementCount(By locator){
+      //  kreiranje liste;
+      //  smestanje nadjenih promenljivih po lokatoru u listu; inicijalizacija liste
+      // vracanje duzine liste;
+    }
+
 }
