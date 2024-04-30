@@ -1,6 +1,6 @@
 package Core;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
@@ -44,10 +44,20 @@ public class BasePage extends Properties {
 
     }
 
-    protected int getElementCount(By locator){
-      //  kreiranje liste;
-      //  smestanje nadjenih promenljivih po lokatoru u listu; inicijalizacija liste
-      // vracanje duzine liste;
+    private void scrollToElement(WebDriver driver, WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("argumrents[0].scrollIntoView(true);", element);
     }
+
+    private WebElement findElement(WebDriver driver, By by) {
+        return driver.findElement(by);
+    }
+
+    public void scrollToElement(String locator){
+        scrollToElement(getDriver(),
+                findElement(getDriver(), By.xpath(locator)));
+    }
+
+
 
 }
