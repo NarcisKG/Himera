@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
+import java.util.List;
 
 public class BasePage extends Properties {
 
@@ -46,7 +47,7 @@ public class BasePage extends Properties {
 
     private void scrollToElement(WebDriver driver, WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("argumrents[0].scrollIntoView(true);", element);
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     private WebElement findElement(WebDriver driver, By by) {
@@ -58,6 +59,9 @@ public class BasePage extends Properties {
                 findElement(getDriver(), By.xpath(locator)));
     }
 
-
+protected int getElementCount(String locator){
+        List<WebElement> webElements = getDriver().findElements(By.xpath(locator));
+        return webElements.size();
+}
 
 }
