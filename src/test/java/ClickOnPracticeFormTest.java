@@ -8,7 +8,7 @@ public class ClickOnPracticeFormTest extends DemoQaHomepage {
     @BeforeEach
     public void setup(){
         createDriver();
-        getDriver().navigate().to("https://demoqa.com");
+        getDriver().navigate().to("https://demoqa.com");}
 
     @Test
     public void test(){
@@ -21,4 +21,4 @@ public class ClickOnPracticeFormTest extends DemoQaHomepage {
         quitDriver();
         }
     }
-}
+

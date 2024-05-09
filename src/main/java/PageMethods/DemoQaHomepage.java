@@ -12,11 +12,11 @@ public class DemoQaHomepage extends BasePage {
         clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.DEMO_QA_ELEMENTS)));
         return new DemoQaElements();}
 
-    public DemoQaHomepage clickOnForms(){
+    public DemoQaForms clickOnForms(){
         clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_FORMS)));
-        return this;}
+        return new DemoQaForms();}
 
-    public DemoQaHomepage clickOnWidgets(){
-        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
-    return this;}
+    //public DemoQaHomepage clickOnWidgets(){
+        //clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
+    //return ;}
 }
