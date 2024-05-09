@@ -8,7 +8,7 @@ public class Attributes {
 
     public static String DEMO_QA_FORMS = "Forms";
 
-    //public static String DEMO_QA
+    public static String DEMO_QA_FORMS_PRACTICE_FORM = "Practice Form";
 
     public static String DEMO_QA_WIDGETS = "Widgets";
 
