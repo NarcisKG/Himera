@@ -19,7 +19,7 @@ public class BasePage extends Properties {
     }
 
     protected void typeText(String text, By locator) {
-        waitForElementToBeVisible(locator);//
+        waitForElementToBeVisible(locator);
         getDriver().findElement(locator).sendKeys(text);
     }
 

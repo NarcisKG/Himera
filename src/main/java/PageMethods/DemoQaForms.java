@@ -9,8 +9,8 @@ import org.openqa.selenium.By;
 
 public class DemoQaForms extends BasePage {
 
-    public DemoQaForms clickOnForms(){
-        clickOnElement(By.xpath(getLocator(Locators.SPAN_ELEMENT_BY_TEXT, Attributes.DEMO_QA_FORMS)));
+    public DemoQaForms clickOnPracticeForm(){
+        clickOnElement(By.xpath(getLocator(Locators.SPAN_ELEMENT_BY_TEXT, Attributes.DEMO_QA_FORMS_PRACTICE_FORM)));
         return this;
     }
     public DemoQaForms verifyFormsListIsVisible(){
