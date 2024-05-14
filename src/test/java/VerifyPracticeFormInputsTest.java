@@ -23,7 +23,7 @@ public class VerifyPracticeFormInputsTest extends PracticeFormPage {
         PracticeFormPage practiceFormPage = new PracticeFormPage();
         practiceFormPage.typeFirstName(FIRST_NAME).verifyFirstName(FIRST_NAME);
         practiceFormPage.typeLastName(LAST_NAME).verifyLastName(LAST_NAME);
-        //practiceFormPage.typeUserEmail(EMAIL).
+        practiceFormPage.typeUserEmail(EMAIL).verifyUserEmail(EMAIL);
     }
 
     @AfterEach

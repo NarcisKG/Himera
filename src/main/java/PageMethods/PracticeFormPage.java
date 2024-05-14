@@ -37,4 +37,10 @@ public class PracticeFormPage extends BasePage {
                 "Text in Last name input field is not as expected");
         return this;
     }
+    public PracticeFormPage verifyUserEmail (String expectedUserEmail){
+        Assertions.assertEquals(expectedUserEmail,
+                getElementText(By.xpath(getLocator(Locators.INPUT_BY_ID, Attributes.PRACTICE_FORM_EMAIL))),
+                "Text in User Email input field is not as expected");
+        return this;
+    }
 }

@@ -13,7 +13,7 @@ public class ClickOnFormsTest extends DemoQaHomepage {
     @Test
     public void test(){
         DemoQaHomepage demo=new DemoQaHomepage();
-        demo.clickOnForms();}
+        demo.clickOnForms().verifyFormsListIsVisible().verifyElementMenuOptionsCount();}
 
     @AfterEach
     public void close(){
