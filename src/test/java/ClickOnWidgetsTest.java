@@ -16,7 +16,7 @@ public class ClickOnWidgetsTest extends DemoQaHomepage {
     @Test
     public void test() {
         DemoQaHomepage demo = new DemoQaHomepage();
-        demo.clickOnWidgets().verifyWidgetsListIsVisible().verifyElementMenuOptionsCount();
+        demo.clickOnWidgets().verifyWidgetListIsVisible().verifyElementMenuOptionsCount();
     }
 
     @AfterEach

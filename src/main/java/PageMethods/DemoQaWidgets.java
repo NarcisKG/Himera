@@ -18,7 +18,7 @@ public class DemoQaWidgets extends BasePage {
         Assert.isTrue(isElementVisible(By.xpath(Locators.ELEMENT_LIST_SHOW)),"Element List is not visible");
         return this;
     }
-    public DemoQaWidgets elementMenuOptionsCount(){
+    public DemoQaWidgets verifyElementMenuOptionsCount(){
         Assertions.assertEquals(9,getElementCount("//div[text()='Widgets']//ancestor::div[@class='element-group']//ul//li"),
                 "Number Option is not as expected");
         return this;

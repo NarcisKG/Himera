@@ -12,5 +12,6 @@ public class Locators {
 
     public static String INPUT_BY_ID = "//input[@id='%ARG%']";
 
+    public static String FRAMES_HEADING = "//h1[@id='sampleHeading']";
 
 }
