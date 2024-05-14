@@ -16,7 +16,7 @@ public class DemoQaHomepage extends BasePage {
         clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_FORMS)));
         return new DemoQaForms();}
 
-    //public DemoQaHomepage clickOnWidgets(){
-        //clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
-    //return ;}
+    public DemoQaHomepage clickOnWidgets(){
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
+    return new DemoQaWidgets() ;}
 }
