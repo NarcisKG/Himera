@@ -14,4 +14,12 @@ public class Locators {
 
     public static String FRAMES_HEADING = "//h1[@id='sampleHeading']";
 
+    public static String ALERT = "//button[@id='alertButton']";
+
+    public static String ALERT_TIMER = "//button[@id='timerAlertButton']";
+
+    public static String CONFIRM_BUTTON = "//button[@id='confirmButton']";
+
+    public static String PROMT_BUTTON = "//button[@id='promtButton']";
+
 }

@@ -22,6 +22,8 @@ public class Attributes {
 
     public static String PRACTICE_FORM_EMAIL = "userEmail";
 
+    public static String ALERTS_FRAMES_WINDOWS = "Alerts, Frame & Windows";
 
+    public static String ALERTS_FRAMES_WINDOWS_ALERTS = "Alerts";
 
 }
