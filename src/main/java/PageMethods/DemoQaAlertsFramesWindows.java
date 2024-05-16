@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 
 public class DemoQaAlertsFramesWindows extends BasePage {
 
-    public DemoQaAlertsFramesWindows verifydemoQaAlertsFrameWindowsListIsVisible(){
+    public DemoQaAlertsFramesWindows verifydemoQaAFWListIsVisible(){
         Assert.isTrue(isElementVisible(By.xpath(getLocator(Locators.ELEMENT_LIST_SHOW))),"Element list is not visible");
         return this;}
 

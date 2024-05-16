@@ -13,7 +13,7 @@ public class ClickOnAlertsFramesWindowsTest extends DemoQaHomepage {
     @Test
     public void test(){
         DemoQaHomepage demo = new DemoQaHomepage();
-        demo.clickOnAlertsFrameWindows().verifydemoQaAlertsFrameWindowsListIsVisible().verifyElementOptionsCount();
+        demo.clickOnAlertsFrameWindows().verifydemoQaAFWListIsVisible().verifyElementOptionsCount();
     }
 
     @AfterEach
