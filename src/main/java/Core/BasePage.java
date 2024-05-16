@@ -5,9 +5,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 public class BasePage extends Properties {
 
+    //final String originalWindow = getDriver().getWindowHandle();
     protected void clickOnElement(By locator) {
         waitForElementToBeVisible(locator);//
         getDriver().findElement(locator).click();
@@ -41,14 +43,11 @@ public class BasePage extends Properties {
             isVisible = false;
 
         }
-        return isVisible;
-
-    }
+        return isVisible;}
 
     private void scrollToElement(WebDriver driver, WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
-    }
+        js.executeScript("arguments[0].scrollIntoView(true);", element);}
 
     private WebElement findElement(WebDriver driver, By by) {
         return driver.findElement(by);
@@ -56,12 +55,27 @@ public class BasePage extends Properties {
 
     public void scrollToElement(String locator){
         scrollToElement(getDriver(),
-                findElement(getDriver(), By.xpath(locator)));
-    }
+                findElement(getDriver(), By.xpath(locator)));}
 
 protected int getElementCount(String locator){
         List<WebElement> webElements = getDriver().findElements(By.xpath(locator));
-        return webElements.size();
-}
+        return webElements.size();}
+
+protected void switchToNewTab(){
+        getDriver().switchTo().newWindow(WindowType.WINDOW);}
+
+protected void switchToNewWindow() {
+    getDriver().switchTo().newWindow(WindowType.WINDOW);}
+    //  Set<String> handles = getDriver().getWindowHandles();
+    //  driver.switchTo().window((String) handles.toArray(1));}
+
+//protected void switchToMainContent(){
+  //  getDriver().switchTo().window(originalWindow);}
+
+protected void switchToMainPageContent(){
+    getDriver().switchTo().defaultContent();
+    }
 
 }
+
+
