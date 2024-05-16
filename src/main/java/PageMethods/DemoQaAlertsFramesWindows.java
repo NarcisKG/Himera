@@ -9,13 +9,13 @@ import org.openqa.selenium.By;
 
 public class DemoQaAlertsFramesWindows extends BasePage {
 
-    public DemoQaAlertsFramesWindows verify demoQaAlertsFramesWindowsListIsVisible(){
-        Assert.isTrue(isElementVisible(By.xpath(getLocator(Locators.ELEMENT_LIST_SHOW))"Element list is not visible");
+    public DemoQaAlertsFramesWindows verifydemoQaAlertsFrameWindowsListIsVisible(){
+        Assert.isTrue(isElementVisible(By.xpath(getLocator(Locators.ELEMENT_LIST_SHOW))),"Element list is not visible");
         return this;}
 
     public DemoQaAlertsFramesWindows verifyElementOptionsCount(){
-        Assertions.assertEquals(5, getElementCount("//div[text()='Alerts, Frame & Windows']//ancestor::div[@class='element-group']//ul//li")
-        "Number Optiom is not as expected");
+        Assertions.assertEquals(5, getElementCount("//div[text()='Alerts, Frame & Windows']//ancestor::div[@class='element-group']//ul//li"),
+        "Number Option is not as expected");
         return this;}
 
     public DemoQaAlertsFramesWindows clickOnAlerts(){

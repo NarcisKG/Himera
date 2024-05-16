@@ -22,9 +22,9 @@ public class DemoQaHomepage extends BasePage {
         clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
     return new DemoQaWidgets();}
 
-    public DemoQaAlertsFramesWindows ClickOnAlertsFramesWindows(){
-        scrollToElement(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAMES_WINDOWS));
-        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAMES_WINDOWS)));
+    public DemoQaAlertsFramesWindows clickOnAlertsFrameWindows(){
+        scrollToElement(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAME_WINDOWS));
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAME_WINDOWS)));
         return new DemoQaAlertsFramesWindows();
     }
 }
