@@ -17,4 +17,10 @@ public class DemoQaBrowserWindowNewWindow extends BasePage {
         return this;
     }
 
+   public DemoQaBrowserWindowNewWindow switchToNewlyOpenedWindow(){
+        switchToNewWindow();
+        return this;
+   }
+
 }
+

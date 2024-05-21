@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 public class DemoQaBrowserWindowNewTab extends BasePage {
 
     public DemoQaBrowserWindowNewTab switchToNewlyOpenTab(){
-        switchToNewTab();
+        switchToNewWindow();
         return this;
     }
     private String getTextFromHeading(){

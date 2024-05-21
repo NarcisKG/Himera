@@ -61,13 +61,14 @@ protected int getElementCount(String locator){
         List<WebElement> webElements = getDriver().findElements(By.xpath(locator));
         return webElements.size();}
 
-protected void switchToNewTab(){
-        getDriver().switchTo().newWindow(WindowType.WINDOW);}
 
 protected void switchToNewWindow() {
-    getDriver().switchTo().newWindow(WindowType.WINDOW);}
-    //  Set<String> handles = getDriver().getWindowHandles();
-    //  driver.switchTo().window((String) handles.toArray(1));}
+    Set<String> handles = getDriver().getWindowHandles();
+    driver.switchTo().window((String) handles.toArray()[1]);}
+
+protected void switchToMainWindow(){
+      //getDriver().switchTo().window(originalWindow);
+        final String originalWindow = getDriver().getWindowHandle();}
 
 //protected void switchToMainContent(){
   //  getDriver().switchTo().window(originalWindow);}
