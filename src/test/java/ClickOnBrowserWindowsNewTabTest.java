@@ -14,7 +14,7 @@ public class ClickOnBrowserWindowsNewTabTest extends DemoQaBrowserWindow {
     @Test
     public void test(){
         DemoQaBrowserWindow demoQaBrowserWindow = new DemoQaBrowserWindow();
-        demoQaBrowserWindow.clickOnewWindow().switchToNewlyOpenedWindow().verifyTextFromHeading();}
+        demoQaBrowserWindow.clickOnNewWindow().switchToNewlyOpenedWindow().verifyTextFromHeading();}
 
     @AfterEach
     public void close(){
