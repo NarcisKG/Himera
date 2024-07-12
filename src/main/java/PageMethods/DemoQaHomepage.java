@@ -13,10 +13,18 @@ public class DemoQaHomepage extends BasePage {
         return new DemoQaElements();}
 
     public DemoQaForms clickOnForms(){
+        scrollToElement(getLocator(Locators.DEMO_QA_SECTION, Attributes.DEMO_QA_FORMS));
         clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_FORMS)));
         return new DemoQaForms();}
 
-    //public DemoQaHomepage clickOnWidgets(){
-        //clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
-    //return ;}
+    public DemoQaWidgets clickOnWidgets(){
+        scrollToElement(getLocator(Locators.DEMO_QA_SECTION, Attributes.DEMO_QA_WIDGETS));
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION,Attributes.DEMO_QA_WIDGETS)));
+    return new DemoQaWidgets();}
+
+    public DemoQaAlertsFramesWindows clickOnAlertsFrameWindows(){
+        scrollToElement(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAME_WINDOWS));
+        clickOnElement(By.xpath(getLocator(Locators.DEMO_QA_SECTION, Attributes.ALERTS_FRAME_WINDOWS)));
+        return new DemoQaAlertsFramesWindows();
+    }
 }
